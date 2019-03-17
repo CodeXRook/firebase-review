@@ -10,4 +10,7 @@ import ImageService from '../services/images';
     authDomain: "success-uploader.firebaseapp.com",
     databaseURL: "https://success-uploader.firebaseio.com",
     projectId: "success-uploader",
- }
+    storageBucket: "success-uploader.appspot.com",
+    messagingSenderId: "370924651634"
+ };
+ firebase.initializeApp(config);
