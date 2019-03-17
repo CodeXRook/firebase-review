@@ -20,7 +20,7 @@ import ImageService from '../services/images';
     saveImage = (url) => {
         const date = Date();
 
-        ImagesService.saveImage(url,date);
+        ImageService.saveImage(url,date);
     }
 
     handleFileInput = async (e) =>{
