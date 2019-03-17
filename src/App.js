@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { HashRouter, Route } from 'react-router-dom';
 
-import Header from './component/header';
+import Header from './components/header';
 import Home from'./containers/home';
 import Upload from './containers/upload';
 

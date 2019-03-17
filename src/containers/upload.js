@@ -6,39 +6,40 @@ import ImageService from '../services/images';
  // Initialize Firebase
 
  const config = {
-    apiKey: "AIzaSyDnX-V1IEQDlgNv1XwraQA9jXi3pE8Yomk",
+    apiKey: "AIzaSyCd75UUcibUnlRsxx0eVwWgJMJeSxVW_bo",
     authDomain: "success-uploader.firebaseapp.com",
     databaseURL: "https://success-uploader.firebaseio.com",
     projectId: "success-uploader",
     storageBucket: "success-uploader.appspot.com",
-    messagingSenderId: "370924651634"
+    messagingSenderId: "1010392252395"
  };
  firebase.initializeApp(config);
 
- export default class Home extends React.Component{
+ export default class Home extends React.Component {
 
     saveImage = (url) => {
         const date = Date();
 
-        ImageService.saveImage(url,date);
+        ImageService.saveImage(url, date);
     }
 
-    handleFileInput = async (e) =>{
+    handleFileInput = async (e) => {
         const firstFile = e.target.files[0];
 
-        const root = firebase.strong().ref()
+        const root = firebase.storage().ref()
         const newImage =root.child(firstFile.name);
 
-        try{
+        try {
             const snapshot = await newImage.put(firstFile);
-            const url = await snapshop.ref.getDownload();
+            const url = await snapshot.ref.getDownloadURL();
             this.saveImage(url);
         }
-        catch(errr) {
+        catch(err) {
             console.log(err);
         }
 
     }
+    
 render(){
 
     return(
