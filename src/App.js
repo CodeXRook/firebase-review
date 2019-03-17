@@ -3,6 +3,8 @@ import { HashRouter, Route } from 'react-router-dom';
 
 import Header from './component/header';
 import Home from'./containers/home';
+import Upload from './containers/upload';
+
 
 
 class App extends Component {
@@ -13,7 +15,7 @@ class App extends Component {
                 <Route path='/' component={ Header } />
                 <div className='container mt-5'>
                 <Route path='/' exact component={ Home } />
-
+                <Route path='/upload' exact component={ Upload } />
                 </div>
                 </>
            </HashRouter>
