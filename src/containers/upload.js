@@ -26,6 +26,14 @@ import ImageService from '../services/images';
     handleFileInput = async (e) =>{
         const firstFile = e.target.files[0];
 
+        const root = firebase.strong().ref()
+        const newImage =root.child(firstFile.name);
+
+        try{
+            const snapshot = await newImage.put(firstFile);
+            const url = await snapshop.ref.getDownload();
+            this.saveImage(url);
+        }
         
     }
  }
