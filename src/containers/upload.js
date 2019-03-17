@@ -14,3 +14,12 @@ import ImageService from '../services/images';
     messagingSenderId: "370924651634"
  };
  firebase.initializeApp(config);
+
+ export default class Home extends React.Component{
+
+    saveImage = (url) => {
+        const date = Date();
+
+        
+    }
+ }
