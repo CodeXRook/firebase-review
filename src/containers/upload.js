@@ -20,6 +20,7 @@ import ImageService from '../services/images';
     saveImage = (url) => {
         const date = Date();
 
-        
+        ImagesService.saveImage(url,date);
     }
+    
  }
