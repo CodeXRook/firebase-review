@@ -15,7 +15,10 @@ export default class Home extends React.Component{
         }
     }
     render(){
-        
+        const { images } = this.state;
+        return (
+            <div className='container'>
+        );
     }
     
 }
