@@ -18,6 +18,12 @@ export default class Home extends React.Component{
         const { images } = this.state;
         return (
             <div className='container'>
+            {
+                images.map((e, i)=>{
+                    return <Image image={e.url} timestamp={e.timestamp} key ={i} />
+                })
+            }
+            </div>
         );
     }
     
