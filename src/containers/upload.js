@@ -22,5 +22,10 @@ import ImageService from '../services/images';
 
         ImagesService.saveImage(url,date);
     }
-    
+
+    handleFileInput = async (e) =>{
+        const firstFile = e.target.files[0];
+
+        
+    }
  }
