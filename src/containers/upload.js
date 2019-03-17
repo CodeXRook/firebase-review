@@ -7,4 +7,7 @@ import ImageService from '../services/images';
 
  const config = {
     apiKey: "AIzaSyDnX-V1IEQDlgNv1XwraQA9jXi3pE8Yomk",
+    authDomain: "success-uploader.firebaseapp.com",
+    databaseURL: "https://success-uploader.firebaseio.com",
+    projectId: "success-uploader",
  }
