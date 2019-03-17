@@ -34,6 +34,23 @@ import ImageService from '../services/images';
             const url = await snapshop.ref.getDownload();
             this.saveImage(url);
         }
-        
+        catch(errr) {
+            console.log(err);
+        }
+
     }
- }
+render(){
+
+    return(
+      <div className='container'>
+      <div className="input-group mb-3">
+      <div className="custom-file">
+      <input type="file" className="custom-file-input" OnChange={this.handleFileInput}/> 
+      <label className="custom-file-label">Upload Image</label>
+       </div>
+      </div>
+      </div>
+    );
+  }
+}
+ 
